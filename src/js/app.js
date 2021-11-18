@@ -1,10 +1,13 @@
 import "../scss/app.scss";
 
 window.addEventListener("DOMContentLoaded", () => {
-  // This block will be executed once the page is loaded and ready
-
-  const button = document.querySelector(".button");
-  button.addEventListener("click", () => {
-    alert("💣");
+  
+  const image = document.querySelector(".image");
+  image.addEventListener("click", (event) => {
+    if(event.target.classList.contains('active')) {
+      event.target.classList.remove('active');
+    } else {
+      event.target.classList.add('active');
+    }
   });
 });
